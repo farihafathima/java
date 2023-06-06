@@ -1,0 +1,22 @@
+package cgginterns.hibernate.map1;
+
+import javax.persistence.Entity;
+
+@Entity
+public class Brand {
+	@Id
+	private int brandId;
+	private String brandname;
+	public Brand(int brandId, String brandname) {
+		super();
+		this.brandId = brandId;
+		this.brandname = brandname;
+	}
+	public Brand() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	
+	
+
+}

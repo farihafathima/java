@@ -1,0 +1,8 @@
+package cgginterns.hibernate.map1;
+
+@Entity
+public class Question {
+
+		private int questionId;
+		
+}

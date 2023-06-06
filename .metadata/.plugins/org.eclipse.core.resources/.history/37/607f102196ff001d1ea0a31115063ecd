@@ -1,0 +1,34 @@
+package cgginterns.hibernate.map1;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
+public class Product {
+	@Id
+	private int prodId;
+	private String prodName;
+	public Product(int prodId, String prodName) {
+		super();
+		this.prodId = prodId;
+		this.prodName = prodName;
+	}
+	public Product() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	public int getProdId() {
+		return prodId;
+	}
+	public void setProdId(int prodId) {
+		this.prodId = prodId;
+	}
+	public String getProdName() {
+		return prodName;
+	}
+	public void setProdName(String prodName) {
+		this.prodName = prodName;
+	}
+	
+
+}

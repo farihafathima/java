@@ -1,0 +1,24 @@
+package cgginterns.hibernate.map1;
+
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+
+public class MapDemo1 {
+	
+	SessionFactory factory=new Configuration().configure().buildSessionFactory();
+	
+	
+		Question q=new Question();
+		
+		q.setQuestionId(1212);
+		q.setQuestion("what is java");
+		
+		
+		Answer a=new Answer();
+		
+		a.setAnsweId(23);
+		a.setAnswer("java is a programming language");
+		
+		
+
+}

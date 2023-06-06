@@ -1,0 +1,13 @@
+package cgginterns.hibernate.map1;
+
+import org.hibernate.SessionFactory;
+
+public class BrandProductMapDemo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		SessionFactory session=new Configuration().configure().builSessionFactory();
+
+	}
+
+}

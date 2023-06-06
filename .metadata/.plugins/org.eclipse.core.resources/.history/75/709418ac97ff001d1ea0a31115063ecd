@@ -1,0 +1,31 @@
+package cgginterns.hibernate.map1;
+
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+
+public class BrandProductMapDemo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		SessionFactory session=new Configuration().configure().buildSessionFactory();
+		
+		Brand brand=new Brand();
+		brand.setBrandId(1);
+		brand.setBrandname("TATA");
+		
+		
+		Product p1=new Product();
+		p1.setProdId(1);
+		p1.setProdName("tata car");
+		
+		Product p2 = new Product();
+		p2.setProdId(2);
+		p2.setProdName("tata salt");
+		
+		Product p3 = new Product();
+		p3.setProdId(3);
+		p2.setProdName("tata clothes");
+		
+	}
+
+}
