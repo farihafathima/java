@@ -1,13 +1,12 @@
 package cgg.hibernate.hql;
 
+import java.util.Arrays;
 import java.util.List;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.query.Query;
-
-import com.cgg.Student;
 
 public class HQLDemo {
 
@@ -20,19 +19,56 @@ public class HQLDemo {
 			//HQL
 			//Syntax
 			
-			String query="from Student s where s.city= :x and s.name=:n";
-			Query q = session.createQuery(query);
-			q.setParameter("x", "warangal");
-			q.setParameter("n","fariha");
+//			String query="from Student s where s.city= :x and s.name=:n";
+//			Query q = session.createQuery(query);
+//			q.setParameter("x", "warangal");
+//			q.setParameter("n","fariha");
+//			
+//			//single result-(unique)
+//			//multiple result-(list)
+//			
+//			List<Student> list = q.list();
+//			
+//			for(Student s:list) {
+//				System.out.println(s.getName()+":"+s.getCity()+":"+s.getCerti().getCourse());
+//			}
+//			
+//			
+//			
+//			System.out.println("------------------------------------------------------------------------");
+//			Transaction tx=session.beginTransaction();
+			//delete query
 			
-			//single result-(unique)
-			//multiple result-(list)
+//			
+//			Query q1=session.createQuery("delete from Student as s where s.city=:x");
+//			
+//			q1.setParameter("x", "warangal");
+//			int r=q1.executeUpdate();
+//			System.out.println("deleted: ");
+//			System.out.println(r);			
 			
-			List<Student> list = q.list();
 			
-			for(Student s:list) {
-				System.out.println(s.getName()+":"+s.getCity()+":"+s.getCerti().getCourse());
+			//update query
+			
+			
+//			Query q2 = session.createQuery("update Student set city=:x where name=:n");
+//			
+//			q2.setParameter("x", "sec");
+//			q2.setParameter("n", "anas");
+//			int r=q2.executeUpdate();
+//			System.out.println(r+" objects updates");
+//			tx.commit();
+			
+			//how to execute join query
+			
+			Query q=
+					session.createQuery("select b.brandId,b.brandname,p.prodName from Brand as b INNER JOIN  b.products as p");
+			
+			List<Object[]> list= q.getResultList();
+			for(Object[] arr:list) {
+				System.out.println(Arrays.toString(arr));
 			}
+			
 			session.close();
 			factory.close();
 			
