@@ -21,9 +21,11 @@ public class FetchDemo {
 		//fetching image logic here
 		
 		byte[] image=addr.getImage();
-		try(FileOutputStream fos=new FileOutputStream("src/main/java/fetchimage.jpeg")){
+		try{
+			FileOutputStream fos=new FileOutputStream("src/main/java/fetchimage.jpeg");
 			fos.write(image);
 			fos.flush();
+			fos.close();
 		}catch(IOException e) {
 			System.out.println(e);
 		}

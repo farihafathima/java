@@ -39,7 +39,7 @@ public class MapDemo1 {
 		a2.setAnswer("java is strongly typed language");
 		a2.setQuestion(q);
 
-		ArrayList<Answer> list=new ArrayList<>();
+		ArrayList<Answer> list=new ArrayList<Answer>();
 		list.add(a);
 		list.add(a1);
 		list.add(a2);

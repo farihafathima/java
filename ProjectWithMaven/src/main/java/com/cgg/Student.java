@@ -1,10 +1,15 @@
 package com.cgg;
 
+import javax.persistence.Cacheable;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
+import org.hibernate.annotations.Cache;
+import org.hibernate.annotations.CacheConcurrencyStrategy;
+
 @Entity
-//@Table(name="mystudents")
+@Cacheable
+@Cache(usage=CacheConcurrencyStrategy.READ_ONLY)
 public class Student {
 	
 	@Id
@@ -50,12 +55,13 @@ public class Student {
 	public void setCerti(Certificate certi) {
 		this.certi = certi;
 	}
-	
-	
 	@Override
 	public String toString() {
-		return "Student [id=" + id + ", name=" + name + ", city=" + city + "]";
+		return "Student [id=" + id + ", name=" + name + ", city=" + city + ", certi=" + certi + "]";
 	}
+	
+	
+	
 	
 
 }

@@ -34,9 +34,9 @@ public class DemoManyToMany {
 	 p1.setProjectId(22);
 	 p1.setProjectName("Chat Bot");
 	 
-	 List<Employee> emp=new ArrayList<>();
+	 List<Employee> emp=new ArrayList<Employee>();
 
-	 List<Project> pro=new ArrayList<>();
+	 List<Project> pro=new ArrayList<Project>();
 	 
 	 emp.add(e1);
 	 emp.add(e);

@@ -41,7 +41,7 @@ public class CascadeExample {
 		
 		Transaction tx = session.beginTransaction();
 		session.save(b1);
-		session.delete(b1);
+		//session.delete(b1);
 		tx.commit();
 		
 		

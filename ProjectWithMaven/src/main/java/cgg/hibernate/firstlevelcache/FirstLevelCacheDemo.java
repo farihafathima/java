@@ -28,7 +28,7 @@ Student student1=session.get(Student.class, 14);
 		
 		System.out.println(student1);
 		
-		System.out.println("woworking something.........");
+		System.out.println("working something.........");
 		System.out.println(session.contains(student1));
 		session.close();
 		factory.close();

@@ -2,46 +2,54 @@
 <!DOCTYPE hibernate-configuration PUBLIC
 	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
 	"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
-	
-	<hibernate-configuration>
+
+<hibernate-configuration>
 	<session-factory>
-	<property name="connection.driver_class">
-	org.postgresql.Driver
-	</property>
-	<property name="connection.url">
-	jdbc:postgresql://localhost:5432/myhiber
-	</property>
-	<property name="connection.username">
-	postgres
-	</property>
-	<property name="connection.password">
-	#Fariha9515
-	</property>
-	<property name="dialect">
-	org.hibernate.dialect.PostgreSQLDialect
-	</property>
-	<property name="hbm2ddl.auto">
-	update
-	</property>
-	<property name="show_sql">
-	true
-	</property>
-	<property name="format_sql">
-	true
-	</property>
-	<mapping class="cgg.interns.hibernate.map.Question"/>
-	<mapping class="cgg.interns.hibernate.map.Answer"/>
-	<mapping class="cgginterns.hibernate.map1.Product"/>
-	<mapping class="cgginterns.hibernate.map1.Brand"/>
-	<mapping class="cgginterns.hibernate.onetooneprac.Person"/>
-	<mapping class="cgginterns.hibernate.onetooneprac.Phone"/>
-		<mapping class="cgg.hibernate.mapmanytomany.Employee"/>
-	<mapping class="com.cgg.Student"/>
-		
-		<mapping class="cgg.hibernate.mapmanytomany.Project"/>
-	
-	
+		<property name="connection.driver_class">
+			org.postgresql.Driver
+		</property>
+		<property name="connection.url">
+			jdbc:postgresql://localhost:5432/myhiber
+		</property>
+		<property name="connection.username">
+			postgres
+		</property>
+		<property name="connection.password">
+			#Fariha9515
+		</property>
+		<property name="dialect">
+			org.hibernate.dialect.PostgreSQLDialect
+		</property>
+		<property name="hbm2ddl.auto">
+			update
+		</property>
+		<property name="show_sql">
+			true
+		</property>
+		<property name="format_sql">
+			true
+		</property>
+		<property name="cache.use_second_level_cache">
+			true
+		</property>
+		<property name="cache.region.factory_class">
+			org.hibernate.cache.ehcache.internal.EhcacheRegionFactory
+		</property>
+		<mapping class="cgg.interns.hibernate.map.Question" />
+		<mapping class="cgg.interns.hibernate.map.Answer" />
+		<mapping class="cgginterns.hibernate.map1.Product" />
+		<mapping class="cgginterns.hibernate.map1.Brand" />
+		<mapping class="cgginterns.hibernate.onetooneprac.Person" />
+		<mapping class="cgginterns.hibernate.onetooneprac.Phone" />
+		<mapping class="cgg.hibernate.mapmanytomany.Employee" />
+		<mapping class="com.cgg.Student" />
+
+		<mapping class="cgg.hibernate.mapmanytomany.Project" />
+	<mapping resource="cgg/hibernate/xmlmapping/Person1.hbm.xml"/>
+	<mapping resource="cgg/hibernate/xmlmapping/Department.hbm.xml"/>
+	<mapping resource="cgg/hibernate/xmlmapping/Employee1.hbm.xml"/>
+
 	</session-factory>
-	
-	
-	</hibernate-configuration>
+
+
+</hibernate-configuration>

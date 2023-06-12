@@ -33,7 +33,7 @@ public class BrandProductMapDemo {
 		p3.setProdName("tata clothes");
 		p3.setBrand(brand);
 		
-		ArrayList<Product> products=new ArrayList<>();
+		ArrayList<Product> products=new ArrayList<Product>();
 		products.add(p1);
 		products.add(p2);
 		products.add(p3);
