@@ -16,7 +16,7 @@ public class ReferencingStream {
 //		System.out.println(findAny.get());
 		
 		
-		
+		//hello
 		List<String> collect = Stream.of("a","b","c").filter(e->e.contains("b")).collect(Collectors.toList());
 		Optional<String> findAny = collect.stream().findAny();	
 		System.out.println(findAny.get());
