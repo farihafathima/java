@@ -1,9 +1,0 @@
-package com.cgg.studentprojet;
-
-public class StudentProject {
-	private int id;
-	private String Name;
-	private String phone;
-	private String city;
-
-}

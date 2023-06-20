@@ -1,6 +1,0 @@
-package com.cgg.studentprojet;
-
-public class Configuration1 {
- 
-	 new Configuration().configure().buildSessionFactory();
-}

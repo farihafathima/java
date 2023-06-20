@@ -12,6 +12,16 @@ public class Student {
 	}
 	
 	
+	public String getName() {
+		return name;
+	}
+
+
+	public int getAge() {
+		return age;
+	}
+
+
 	@Override
 	public String toString() {
 		return "Student [name=" + name + ", age=" + age + "]";

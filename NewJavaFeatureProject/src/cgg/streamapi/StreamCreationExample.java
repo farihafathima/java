@@ -36,14 +36,6 @@ public class StreamCreationExample {
 		 System.out.println("Student data sent for processing........");
 		 parallelStream.forEach(s->doProcess(s));
 		
-		
-		
-		
-		
-		
-		
-		
-		
 	}
 
 	private static void doProcess(Student s) {

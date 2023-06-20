@@ -13,15 +13,9 @@ public class ClosureExample {
 //		});
 		
 		doOperate(x,i->{
-			y=100;
+			//y=100;
 			System.out.println(i+y);
 		});
-			
-			
-		
-		
-		
-
 	}
 	
 	
