@@ -66,7 +66,7 @@ public class InfiniteStreamExample {
 		IntStream chars="abcf".chars();
 		chars.forEach(System.out::println);
 		
-		sys
+	
 		
 		
 		
