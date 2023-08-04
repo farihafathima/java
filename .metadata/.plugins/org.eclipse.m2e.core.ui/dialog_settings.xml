@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
+	<section name="org.eclipse.m2e.core.pom.overview">
+	</section>
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
-			<item value="C:\Users\CGG\eclipse-workspace\ProjectWithMaven\src"/>
-			<item value="C:\Users\CGG\eclipse-workspace\ProjectWithMaven"/>
+			<item value="C:\Users\CGG\Downloads\ecommerce\src\main\java\cgg\ecommerce\servlets\AddUserServlet.java"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
@@ -27,13 +30,13 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
-			<item value="com.cgg.studentprojet"/>
+			<item value="cgg.ecommerce"/>
 		</list>
 		<list key="groupId">
-			<item value="com.cgg.studentprojet"/>
+			<item value="cgg.ecommerce"/>
 		</list>
 		<list key="artifactId">
-			<item value="StudentProjectMaven"/>
+			<item value="Ecommerce1"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
@@ -65,9 +68,5 @@
 		<list key="version">
 			<item value="0.0.1-SNAPSHOT"/>
 		</list>
-	</section>
-	<section name="org.eclipse.m2e.core.pom.overview">
-	</section>
-	<section name="org.eclipse.m2e.core.pom.dependencies">
 	</section>
 </section>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Login Page</title>
+</head>
+<body style="background-color: rgba(0, 0, 0, 0.5); display: flex; align-items: center; justify-content: center; height: 100vh;">
+  <form action="loginServlet" method="post">
+    <table style="text-align: center; background-color: white; padding: 70px; border-radius: 10px; border: 2px solid black; box-shadow: 3px 3px 5px black; width: 400px;">
+      <tr>
+        <td colspan="2" style="text-align: center; margin: 20px;">
+          <h1>Login</h1>
+        </td>
+      </tr>
+      <tr>
+        <td style="font-size: 25px; margin: 20px;">UserName:</td>
+        <td><input type="text" name="username" style="font-size: 25px;" /></td>
+      </tr>
+      <tr style="margin: 20px">
+        <td style="font-size: 25px;">Password:</td>
+        <td><input type="password" name="password" style="font-size: 25px;" /></td>
+      </tr>
+      <tr style="margin: 20px">
+        <td colspan="2" style="text-align: center;"><button type="submit" style="font-size: 20px; padding: 5px;">Submit</button></td>
+      </tr>
+    </table>
+  </form>
+</body>
+</html>

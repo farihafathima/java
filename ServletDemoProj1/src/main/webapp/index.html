@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+
+.container{
+width:40%;
+border:1px solid black;
+margin:auto;
+padding:20px;
+font-size:20px;
+
+}
+#myform table tr td input{
+font-size:20px;
+}
+
+
+</style>
+</head>
+<body>
+	<!-- <h2>hello</h2>
+	<h2><a href="first">First Servlet</a></h2>
+	<h2><a href="second">Second Servlet</a></h2> -->
+	<div class="container">
+	<h1>My Form</h1>
+	<form id="myform" action="RegisterServlet" method="post">
+	<table>
+		<tr>
+		<td>
+			Enter Your Name:
+		
+		</td>
+		<td><input type="text" name="user_name" placeholder="Enter here"/></td>
+		</tr>
+		<tr>
+		<td>
+			Enter Password here:
+		
+		</td>
+		<td><input type="password" name="password" placeholder="Enter password here"/></td>
+		</tr>
+		<tr>
+		<td>
+			Enter Your email:
+		
+		</td>
+		<td><input type="email" name="email" placeholder="Enter email here"/></td>
+		</tr>
+		<tr>
+		<td>
+			Select Gender:
+		
+		</td>
+		<td><input type="radio" name="user_gender" value="male"/>Male &nbsp;&nbsp;
+		<input type="radio" name="user_gender" value="female"/>Female &nbsp;&nbsp;</td>
+		</tr>
+		
+		<tr>
+		<td>
+			Select Your Course:
+		
+		</td>
+		<td><select name="user_course"><option value="Java">Java</option>
+		<option value="php">PHP</option>
+		<option value="python">Python1</option>
+		<option value="Android">Android</option></select>
+	</td>
+		</tr>
+		
+		
+		<tr>
+		<td  >
+			<input type="checkbox"  value="checked" name="condition"> 
+		</td>
+		<td>Agree terms and conditions</td>
+		
+		</tr>
+		
+		
+		<tr>
+		
+		<td></td>
+		<td>
+		<button type="submit" v>Submit</button>
+		<button type="reset">Reset</button>
+		
+		
+		</td>
+		
+		
+		</tr>
+		
+	</table>
+	
+	</form>
+	
+	</div>
+</body>
+</html>

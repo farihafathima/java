@@ -1,0 +1,33 @@
+package test;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import jakarta.servlet.GenericServlet;
+import jakarta.servlet.ServletConfig;
+import jakarta.servlet.ServletContext;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.ServletRequest;
+import jakarta.servlet.ServletResponse;
+
+public class DisContext extends GenericServlet {
+	
+	public ServletContext ctx=null;
+	public void init(ServletConfig sc) {
+		ctx=sc.getServletContext();
+	}
+	
+	
+	
+
+	@Override
+	public void service(ServletRequest req, ServletResponse resp) throws ServletException, IOException {
+		resp.setContentType("text/html");
+		PrintWriter out = resp.getWriter();
+		int countVar = Integer.parseInt(ctx.getInitParameter("ContextVar"));
+		out.println("<br>Context var value:"+countVar);
+		
+
+	}
+
+}

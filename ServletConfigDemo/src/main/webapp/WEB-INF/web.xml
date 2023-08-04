@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://jakarta.ee/xml/ns/jakartaee" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd" id="WebApp_ID" version="6.0">
+   <display-name>ServletConfigDemo</display-name>
+
+    <!-- Define the context parameter -->
+    <context-param>
+        <param-name>ContextVar</param-name>
+        <param-value>1234</param-value>
+    </context-param>
+
+    <!-- Define the DisConfigDemo servlet -->
+    <servlet>
+        <servlet-name>DisConfigDemo</servlet-name>
+        <servlet-class>test.DisConfigDemo</servlet-class>
+        <!-- Specify init-param for the DisConfigDemo servlet -->
+        <init-param>
+            <param-name>count</param-name>
+            <param-value>10</param-value>
+        </init-param>
+    </servlet>
+
+    <!-- Map the DisConfigDemo servlet -->
+    <servlet-mapping>
+        <servlet-name>DisConfigDemo</servlet-name>
+        <url-pattern>/pqr</url-pattern>
+    </servlet-mapping>
+
+    <!-- Define the DisContext servlet -->
+    <servlet>
+        <servlet-name>DisContext</servlet-name>
+        <servlet-class>test.DisContext</servlet-class>
+        <!-- Specify init-param for the DisContext servlet -->
+        <init-param>
+            <param-name>countVar</param-name>
+            <param-value>20</param-value>
+        </init-param>
+    </servlet>
+
+    <!-- Map the DisContext servlet -->
+    <servlet-mapping>
+        <servlet-name>DisContext</servlet-name>
+        <url-pattern>/pqr1</url-pattern>
+    </servlet-mapping>
+
+  <welcome-file-list>
+    <welcome-file>Home.jsp</welcome-file>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+  </welcome-file-list>
+ 
+</web-app>
