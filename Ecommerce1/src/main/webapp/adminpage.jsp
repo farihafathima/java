@@ -1,8 +1,11 @@
 <%@ page import="java.util.List" %> 
 <%@ page import="cgg.doa.UserDao" %>  
 <%@ page import="cgg.entities.Users" %>
+<%@ page import="cgg.entities.Category" %>
 <%@ page import="cgg.doa.CategoryDoa" %>  
 <%@ page import="cgg.entities.Category" %>
+<%@ page import="cgg.doa.ProductDoa" %>  
+<%@ page import="cgg.entities.Products" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -44,6 +47,9 @@
     <a href="categories.jsp" style="text-decoration:none; color:black">
      <img alt="image not available" src="Images/lists.png">
       <h1>Category</h1>
+      
+      <% List<Category> list2=CategoryDoa.getCategory(); %>
+     	<h1><%=list2.size() %></h1>
       </a>
     </div>
 
@@ -51,6 +57,8 @@
     <a href="products.jsp"  style="text-decoration:none; color:black">
      <img alt="image not available" src="Images/products.png">
       <h1>Products</h1>
+       <% List<Products> list3=ProductDoa.getAllProducts(); %>
+     	<h1><%=list3.size() %></h1>
       </a>
     </div>
 
@@ -125,14 +133,14 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <form action="AddUser"  method="post">
+        <form action="AddUser"  method="post" enctype="multipart/form-data">
           <div class="mb-3">
             <label for="recipient-name" class="col-form-label">Enter Product Title</label>
             <input type="text" class="form-control" id="recipient-name"  name="productTitle">
           </div>
           <div class="mb-3">
             <label for="recipient-name" class="col-form-label">Enter Product Price</label>
-            <input type="number" class="form-control" id="recipient-name" name="productDiscription">
+            <input type="number" class="form-control" id="recipient-name" name="productprice">
           </div>
           <div class="mb-3">
             <label for="recipient-name" class="col-form-label">Enter product discount </label>
@@ -144,17 +152,17 @@
           </div>
           <div class="mb-3">
             <label for="message-text" class="col-form-label">Enter Product Description</label>
-            <textarea class="form-control" id="message-text"  name="address"></textarea>
+            <textarea class="form-control" id="message-text"  name="productdiscription"></textarea>
           </div>
           <div class="mb-3">
           
          	<label for="message-text" class="col-form-label">Choose Product Category</label>
-			 <select class="form-select" id="recipient-name" name="quantity">
+			 <select class="form-select" id="recipient-name" name="category">
 				  <% 
 				  List<String> list1 = CategoryDoa.getAllCategoryNames();
 				  for(String name : list1) {
 				  %>
-				  <option value="1"><%= name %></option>
+				  <option value="<%= name %>"><%= name %></option>
 				  <% 
 				  }
 				  %>
@@ -162,7 +170,7 @@
 			</div>
 			 <div class="mb-3">
             <label for="message-text" class="col-form-label">Upload the Image</label>
-          	<input type="file" id="imageUpload" name="image" accept="image/*">
+          	<input type="file" id="imageUpload" name="image">
           </div>
 
           <div class="modal-footer">

@@ -36,4 +36,21 @@ public static void addCategory(String categoryName,String categoryDescription) {
 		}
 		return categoryNames;
 	}
+	
+	public static List<Category> getCategory(){
+		List<Category> category=null;
+		Session session = SessionFacrtory.getSessionFactory().openSession();
+		try {
+			Query<Category> query = session.createQuery(" FROM Category", Category.class);
+			category = query.getResultList();
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			session.close();
+		}
+		return category;
+		
+	}
+
 }
+
